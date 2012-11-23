@@ -12,9 +12,8 @@ class UserSessionsController < ApplicationController
     if not user
       # New user registration
       user = User.new(:uid => omniauth['uid'])
-    end    
-    user.first_name = omniauth['extra']['first_name']
-    user.last_name  = omniauth['extra']['last_name']
+    end
+    user.name = omniauth['extra']['name']
     user.save
 
     #p omniauth
