@@ -5,6 +5,6 @@
 <% if not @current_user %>
  <%= link_to 'login', '/auth/mconf_id' %>
 <% else %> 
-  <h1>Hello <%= "#{@current_user.first_name} #{@current_user.last_name}" %> !</h1>
+  <h1>Hello <%= "#{@current_user.name}" %> !</h1>
  <%= link_to 'logout', '/logout' %>
 <% end %>
